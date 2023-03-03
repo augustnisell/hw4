@@ -20,9 +20,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="btn btn-outline-secondary m-1" href="/logout">Logout</a>
-            <a class="btn btn-outline-success m-1" href="/login">Login</a>
-            <a class="btn btn-outline-primary m-1" href="/users/new">Signup</a>
+            <% if @current_user %>
+              <%= @current_user["username"] %>
+              <a class="btn btn-outline-secondary m-1" href="/logout">Logout</a>
+            <% else %>
+              <a class="btn btn-outline-success m-1" href="/login">Login</a>
+              <a class="btn btn-outline-primary m-1" href="/users/new">Signup</a>
+            <% end %>
           </div>
         </div>
       </div>

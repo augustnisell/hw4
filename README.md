@@ -6,12 +6,12 @@ Rubric (20 points)
 Implement all user stories
 
 (6 points) User Authentication
-When creating new users, save a 1-way encrypted hash of the password using Bcrypt.
-Complete the login form
-Secure data in transit - use the appropriate form input types when dealing with any password data.
-In the sessions controller, authenticate the user by email and password. If successful, "log them in" (i.e. assign the user's id to the session hash) and redirect to the places index. If unsuccessful, redirect back to login.
-Use @current_user to conditionally show the login/signup links or a logout link. You will first need to assign @current_user in the global application controller.
-In the sessions controller, "logout" a logged-in user (i.e. remove the user's id from the session hash) and redirect to login.
+<!-- When creating new users, save a 1-way encrypted hash of the password using Bcrypt. -->
+<!-- Complete the login form -->
+<!-- Secure data in transit - use the appropriate form input types when dealing with any password data. -->
+<!-- In the sessions controller, authenticate the user by email and password. If successful, "log them in" (i.e. assign the user's id to the session hash) and redirect to the places index. If unsuccessful, redirect back to login. -->
+<!-- Use @current_user to conditionally show the login/signup links or a logout link. You will first need to assign @current_user in the global application controller. -->
+<!-- In the sessions controller, "logout" a logged-in user (i.e. remove the user's id from the session hash) and redirect to login. -->
 
 (3 points) User Authorization
 Only show the new post form to logged-in users (i.e. if there is a @current_user).
