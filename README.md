@@ -23,7 +23,7 @@ Implement all user stories
 <!-- Add Bootstrap's navbar component (any version). Move the relevant links (e.g. "Home", "Login", "Signup", "Logout") into the navbar. -->
 <!-- Wrap all relevant content including <%= yield %> in a Bootstrap .container (navbar is commonly excluded from the .container). -->
 <!-- Using the Bootstrap button component, style all links to forms and all form submit buttons. -->
-Use the Bootstrap grid for posts (3 posts per row on larger screens, stacking on smaller screens). See wireframe.
+<!-- Use the Bootstrap grid for posts (3 posts per row on larger screens, stacking on smaller screens). See wireframe. -->
 Use the bootstrap spacing (margin or padding) as needed, but at least twice (not counting the navbar).
 
 (5 points) TBA

@@ -2,13 +2,17 @@
 
 <% if @current_user %>
   <h2>My Posts</h2>
-  <% for post in @posts %>
-    <% if post["place_id"] == @place["id"] && post["user_id"] == @current_user["id"] %>
-      <h3><%= post["title"] %></h3>
-      <h4><%= post["posted_on"] %></h4>
-      <p><%= post["description"] %></p>
+  <div class="row">
+    <% for post in @posts %>
+      <% if post["place_id"] == @place["id"] && post["user_id"] == @current_user["id"] %>
+        <div class="col-lg-4">
+          <h3><%= post["title"] %></h3>
+          <h4><%= post["posted_on"] %></h4>
+          <p><%= post["description"] %></p>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 
   <p>
     <a href="/posts/new?place_id=<%= @place["id"] %>">New Post</a>
