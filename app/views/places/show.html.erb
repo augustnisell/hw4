@@ -1,15 +1,21 @@
 <h1><%= @place["name"] %></h1>
 
-<h2>My Posts</h2>
-<% for post in @posts %>
-  <h3><%= post["title"] %></h3>
-  <h4><%= post["posted_on"] %></h4>
-  <p><%= post["description"] %></p>
-<% end %>
+<% if @current_user %>
+  <h2>My Posts</h2>
+  <% for post in @posts %>
+    <% if post["place_id"] == @place["id"] && post["user_id"] == @current_user["id"] %>
+      <h3><%= post["title"] %></h3>
+      <h4><%= post["posted_on"] %></h4>
+      <p><%= post["description"] %></p>
+    <% end %>
+  <% end %>
 
-<p>
-  <a href="/posts/new?place_id=<%= @place["id"] %>">New Post</a>
-</p>
+  <p>
+    <a href="/posts/new?place_id=<%= @place["id"] %>">New Post</a>
+  </p>
+<% else %>
+  <h2>You must be logged in to see posts</h2>
+<% end %>
 
 <p>
   <a href="/places">Back to All Places</a>
