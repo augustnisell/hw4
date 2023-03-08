@@ -1,4 +1,4 @@
-<h1>New Place</h1>
+<h1 class="my-3">New Place</h1>
 
 <%= form_with :model => @place do |form| %>
   <p>
@@ -7,5 +7,6 @@
   </p>
   <p>
     <%= form.submit "Create Place", class: "btn btn-outline-primary" %>
+    <a href="/places/" class="btn btn-outline-danger">Cancel New Place</a>
   </p>
 <% end %>

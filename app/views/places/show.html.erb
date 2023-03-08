@@ -1,7 +1,13 @@
-<h1><%= @place["name"] %></h1>
+<h1 class="my-3"><%= @place["name"] %></h1>
+<p class="mb-5">
+  <a href="/places" class="btn btn-outline-primary">Back to All Places</a>
+</p>
 
 <% if @current_user %>
-  <h2>My Posts</h2>
+  <p>
+    <a href="/posts/new?place_id=<%= @place["id"] %>" class="btn btn-outline-primary">New Post</a>
+  </p>
+
   <div class="row">
     <% for post in @posts %>
       <% if post["place_id"] == @place["id"] && post["user_id"] == @current_user["id"] %>
@@ -16,14 +22,6 @@
       <% end %>
     <% end %>
   </div>
-
-  <p>
-    <a href="/posts/new?place_id=<%= @place["id"] %>">New Post</a>
-  </p>
 <% else %>
   <h2>You must be logged in to see posts</h2>
 <% end %>
-
-<p>
-  <a href="/places">Back to All Places</a>
-</p>
